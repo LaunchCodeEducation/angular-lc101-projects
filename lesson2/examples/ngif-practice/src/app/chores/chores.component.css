@@ -1,3 +1,18 @@
 .chores {
     color: #ff4f33;
- }
+}
+
+.doneChores {
+    color: #3c79b8;
+}
+
+h3 {
+    text-align: center;
+}
+
+img {
+    max-width: 15%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
