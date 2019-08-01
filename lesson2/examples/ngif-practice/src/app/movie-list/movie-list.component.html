@@ -1,0 +1,15 @@
+<div class='movies' *ngIf ="movies.length > 8; else needMoreMovies">
+    <h3>Movies to Watch</h3>
+    <ol>
+        <li *ngFor ="let movie of movies">{{movie}}</li>
+    </ol>
+</div>
+
+<ng-template #needMoreMovies>
+    <div class='movies'>
+        <h3>Not Enough Movies!</h3>
+        <p>You only have {{movies.length}} movies on your watch list!</p>
+        <p>What's up with that?</p>
+        <p>You need to purchase expensive popcorn more often.</p>
+    </div>    
+</ng-template>
