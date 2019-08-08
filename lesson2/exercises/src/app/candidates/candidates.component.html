@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="candidates col-4">
+            <h2>Candidates</h2>
+            <ol>
+                <li *ngFor="let candidate of candidates" (click)="selected = candidate">{{candidate.name}}</li>
+            </ol>
+        </div>
+    
+        <div class="data col-4">
+            <h2>Data</h2>
+            <p *ngIf="selected">
+                Age: {{selected.data.age}} <br>
+                Mass: {{selected.data.mass}} <br>
+            </p>
+        </div>
+    
+        <div class="centered col-4">
+            <h2>Sidekick</h2>
+            <div *ngIf = "selected">
+                <img src='{{selected.image.src}}' alt='Oops! Missing photo!'/>
+                <p>{{selected.image.name}}</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class = 'centered'>
+        <button (click) = "selected = false">Clear</button>
+    </div>
+</div>
