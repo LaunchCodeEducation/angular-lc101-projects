@@ -11,11 +11,11 @@
     <ul>
         <li *ngFor = 'let done of finishedChores'>{{done}}</li>
     </ul>
-    <img src='{{trophyImage}}' alt='Oops! No image.' *ngIf = 'chores.length==0 || finishedChores.length - chores.length >= 3; else noAllowance'>
+    <img src='{{trophyImage}}' alt='Oops! No image.' *ngIf = 'chores.length === 0 || finishedChores.length - chores.length >= 3; else noAllowance'>
 </div>
 <hr>
 
-<h1 *ngIf = 'chores.length == 0 && finishedChores.length >= 4; else wantIceCream'>Ice cream treat!</h1>
+<h1 *ngIf = 'chores.length === 0 && finishedChores.length >= 4; else wantIceCream'>Ice cream treat!</h1>
 
 <ng-template #noAllowance>
     <p style='color:black'>No allowance yet.</p>
