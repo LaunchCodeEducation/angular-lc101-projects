@@ -28,17 +28,16 @@
                 <li>Use *ngFor to list the selected crew.</li>
             </ul>
             <!-- Add a "Clear Crew List" button here. -->
-            <button *ngIf = "crew.length !== 0" (click) = "crew = []">Clear Crew List</button>
         </div>
     </div>
     <hr>
     <div class = 'centered'>
-        <button (click) = "selected = false">Clear Data & Image</button>
+        <button>Clear Data & Image</button>
         <!-- Add a "Send on Mission" button here. -->
-        <button *ngIf = "selected && !crew.includes(selected) && crew.length < 3" (click) = "addToCrew(selected)">Send on Mission</button>
     </div>
 </div>
 
+<!-- The code below is for one of the Bonus Missions -->
 <ng-template #editMission>
     <h2 class="centered">
         Mission Name:
