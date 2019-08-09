@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ɵangular_packages_platform_browser_platform_browser_k } from '@angular/platform-browser';
 
 @Component({
   selector: 'candidates',
@@ -7,15 +6,32 @@ import { ɵangular_packages_platform_browser_platform_browser_k } from '@angular
   styleUrls: ['./candidates.component.css']
 })
 export class CandidatesComponent implements OnInit {
-  candidates = [
-    {name: 'Rusty Rutabaga', data: {age: 5, mass: '0.75 kg'}, image: {name: 'Blake', src: 'assets/images/Blake.png'}},
-    {name: 'Tessa Tortoise', data: {age: 126, mass: '113 kg'}, image: {name: 'Sally', src: 'assets/images/Sally.png'}},
-    {name: 'Bernie Beagle', data: {age: 4, mass: '15 kg'}, image: {name: 'Paul', src: 'assets/images/Timmy.png'}}
+   missionName = "LaunchCode Moonshot"
+   candidates = [
+    {name: 'Rusty Rutabaga', data: {age: 5, mass: '0.75 kg', sidekick: 'Blake'}, image: 'assets/images/Blake.png'},
+    {name: 'Tessa Tortoise', data: {age: 126, mass: '113 kg', sidekick: 'Sally'}, image: 'assets/images/Sally.png'},
+    {name: 'Bernie Beagle', data: {age: 4, mass: '15 kg', sidekick: 'Paul'}, image: 'assets/images/Paul.png'},
+    {name: 'Jackalope', data: {age: 45, mass: '33 kg', sidekick: 'Chris'}, image: 'assets/images/Chris.png'},
+    {name: 'Champ', data: {age: 9, mass: '36 kg', sidekick: 'Carly'}, image: 'assets/images/Carly.png'}
   ];
+
+  crew = [];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addToCrew(person: object) {
+    if (!this.crew.includes(person)){
+      this.crew.push(person);
+    }
+    return false;
+  }
+
+  changeMissionName(name: string){
+     this.missionName = name;
+     return false;
   }
 
 }

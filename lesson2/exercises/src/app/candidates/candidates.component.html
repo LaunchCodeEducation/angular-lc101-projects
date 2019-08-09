@@ -1,30 +1,49 @@
 <div class="container">
+    <h2 class="centered" *ngIf = "!editMissionName; else editMission" (click)="editMissionName = true">Mission Name: {{missionName}}</h2>
+    <br>
     <div class="row justify-content-center">
-        <div class="candidates col-4">
+        <div class="candidates col-3">
             <h2>Candidates</h2>
             <ol>
                 <li *ngFor="let candidate of candidates" (click)="selected = candidate">{{candidate.name}}</li>
             </ol>
         </div>
     
-        <div class="data col-4">
-            <h2>Data</h2>
+        <div class="data col-3">
+            <h2>Candidate Data</h2>
             <p *ngIf="selected">
+                Name: {{selected.name}} <br>
                 Age: {{selected.data.age}} <br>
                 Mass: {{selected.data.mass}} <br>
+                Sidekick: {{selected.data.sidekick}}
             </p>
         </div>
     
-        <div class="centered col-4">
+        <div class="centered col-3">
             <h2>Sidekick</h2>
             <div *ngIf = "selected">
-                <img src='{{selected.image.src}}' alt='Oops! Missing photo!'/>
-                <p>{{selected.image.name}}</p>
+                <img src='{{selected.image}}' alt='Oops! Missing photo!'/>
             </div>
+        </div>
+
+        <div class="crew col-3">
+            <h2>Selected Crew</h2>
+            <ul>
+                <li *ngFor = "let member of crew">{{member.name}}</li>
+            </ul>
+            <button *ngIf = "crew.length !== 0" (click) = "crew = []">Clear Crew List</button>
         </div>
     </div>
     <hr>
     <div class = 'centered'>
-        <button (click) = "selected = false">Clear</button>
+        <button (click) = "selected = false">Clear Data & Image</button>
+        <button *ngIf = "selected && !crew.includes(selected) && crew.length < 3" (click) = "addToCrew(selected)">Send on Mission</button>
     </div>
 </div>
+
+<ng-template #editMission>
+    <h2 class="centered">
+        Mission Name:
+        <input #newName (keyup.enter)='editMissionName = changeMissionName(newName.value)' type='text'/>
+    </h2>
+</ng-template>
