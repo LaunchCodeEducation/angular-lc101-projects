@@ -31,7 +31,6 @@ export class CandidatesComponent implements OnInit {
 
   changeMissionName(name: string){
      this.missionName = name;
-     return false;
   }
 
 }

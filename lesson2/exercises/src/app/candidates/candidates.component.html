@@ -5,25 +5,20 @@
         <div class="candidates col-3">
             <h2>Candidates</h2>
             <ol>
-                <li *ngFor="let candidate of candidates" (click)="selected = candidate">{{candidate.name}}</li>
+                <li>Use *ngFor to automatically list all of the candidates' names.</li>
             </ol>
         </div>
     
         <div class="data col-3">
             <h2>Candidate Data</h2>
-            <p *ngIf="selected">
-                Name: {{selected.name}} <br>
-                Age: {{selected.data.age}} <br>
-                Mass: {{selected.data.mass}} <br>
-                Sidekick: {{selected.data.sidekick}}
+            <p> <!-- Add an *ngIf to this tag to display the selected candidate's data-->
+                {{selected.name}}
             </p>
         </div>
     
         <div class="centered col-3">
             <h2>Sidekick</h2>
-            <div *ngIf = "selected">
-                <img src='{{selected.image}}' alt='Oops! Missing photo!'/>
-            </div>
+            <img src="{{placeholder}}" alt="Image appears here when a name is selected."/>
         </div>
 
         <div class="crew col-3">
@@ -44,6 +39,6 @@
 <ng-template #editMission>
     <h2 class="centered">
         Mission Name:
-        <input #newName (keyup.enter)='editMissionName = changeMissionName(newName.value)' type='text'/>
+        <input #newName (keyup.enter)='changeMissionName(newName.value); editMissionName = false' type='text'/>
     </h2>
 </ng-template>
