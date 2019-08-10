@@ -22,7 +22,7 @@
         <div class="centered col-3">
             <h2>Sidekick</h2>
             <div *ngIf = "selected">
-                <img src='{{selected.image}}' alt='Oops! Missing photo!'/>
+                <img src="{{selected.image}}" alt="Oops! Missing photo!"/>
             </div>
         </div>
 
@@ -35,7 +35,7 @@
         </div>
     </div>
     <hr>
-    <div class = 'centered'>
+    <div class = "centered">
         <button (click) = "selected = false">Clear Data & Image</button>
         <button *ngIf = "selected && !crew.includes(selected) && crew.length < 3" (click) = "addToCrew(selected)">Send on Mission</button>
     </div>
@@ -44,6 +44,6 @@
 <ng-template #editMission>
     <h2 class="centered">
         Mission Name:
-        <input #newName (keyup.enter)='editMissionName = changeMissionName(newName.value)' type='text'/>
+        <input #newName (keyup.enter)="editMissionName = changeMissionName(newName.value)" type="text"/>
     </h2>
 </ng-template>
