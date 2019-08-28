@@ -10,7 +10,7 @@ export class SkillSetComponent implements OnInit {
    skills: string[] = ['Loops', 'Conditionals', 'Functions', 'Classes', 'Modules', 'Git', 'HTML/CSS'];
    alignment: string = 'center';
    color: string = 'black';
-   changeColor: boolean = true;
+   changeColor: boolean = false;
 
    constructor() { }
 
