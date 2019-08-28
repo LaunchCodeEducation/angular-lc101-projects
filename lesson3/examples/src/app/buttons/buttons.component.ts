@@ -8,11 +8,26 @@ import { Component, OnInit } from '@angular/core';
 export class ButtonsComponent implements OnInit {
    buttonHeading: string = "Buttons"
    active: boolean = true;
-   buttonColors: string[] = ['blue', 'magenta', '#b87333'];
+   buttonState: boolean[] = [true, true, true];
+   location: string = 'center';
+   reactivate: boolean = true;
 
    constructor() { }
 
    ngOnInit() {
    }
 
+   reactivateButtons() {
+      for (let i = 0; i < this.buttonState.length; i++) {
+         this.buttonState[i] = true;
+      }
+      return this.buttonState;
+   }
+
+   shiftLocation(oldLocation: string) {
+      while (this.location === oldLocation) {
+         this.location = ['left', 'right', 'center'][Math.floor(Math.random()*3)];
+      }
+      return this.location;
+   }
 }

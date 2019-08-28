@@ -1,8 +1,13 @@
 h3 {
-    text-align: center;
-    text-decoration: underline;
- }
- 
- .skills {
-    color: green;
- }
+   text-align: center;
+   text-decoration: underline;
+}
+
+.skills {
+   color: green;
+}
+
+.pStyle {
+   color: black;
+   text-align: center;
+}

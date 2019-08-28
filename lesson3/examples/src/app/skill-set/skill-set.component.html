@@ -1,10 +1,9 @@
 <div class="skills">
     <h3>{{listHeading}}</h3>
     <ul>
-       <li *ngFor="let skill of skills">{{skill}}</li>
+       <li *ngFor="let skill of skills" [class.pStyle]="changeColor" (click)="changeColor = !changeColor">{{skill}}</li>
     </ul>
-    <p>Here is some practice text...</p>
-    <p>Here is some more practice text...</p>
-    <div>Here is another line of practice text...</div>
+    <p [style.color]="color" [align]="alignment">Here is some practice text...</p>
+    <p [class.pStyle] = "changeColor" (click)="changeColor = !changeColor">Here is some more practice text...</p>
  </div>
  
