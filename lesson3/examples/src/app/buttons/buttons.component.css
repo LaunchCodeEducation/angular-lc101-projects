@@ -11,3 +11,15 @@ h3 {
 button {
    margin: 5px;
 }
+
+.gold {
+   background: gold;
+}
+
+.silver {
+   background: silver;
+}
+
+.copper {
+   background: #b87333 ;
+}
