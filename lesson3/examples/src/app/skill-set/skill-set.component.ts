@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class SkillSetComponent implements OnInit {
    listHeading: string = 'Some Coding Skills I Know';
    skills: string[] = ['Loops', 'Conditionals', 'Functions', 'Classes', 'Modules', 'Git', 'HTML/CSS'];
-   textColors: string[] = ['black', 'violet', 'lightblue'];
+   color: string = 'black';
+   alignment: string = 'center';
+   changeColor: boolean = true;
 
    constructor() { }
 
-   ngOnInit() {
-   }
+   ngOnInit() { }
 
 }
