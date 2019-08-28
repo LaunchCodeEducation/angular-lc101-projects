@@ -7,12 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
    buttonHeading: string = "Buttons"
-   active: boolean = true;
-   buttonColors: string[] = ['blue', 'magenta', '#b87333'];
+   inactive: boolean = false;
 
    constructor() { }
 
-   ngOnInit() {
-   }
+   ngOnInit() { }
 
 }
