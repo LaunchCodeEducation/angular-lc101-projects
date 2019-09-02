@@ -1,0 +1,35 @@
+.justify-content-center {
+    text-align: center; 
+    height: 400px; 
+    width: 100%;
+}
+
+.container-header {
+    text-align: center;
+}
+
+.container-left {
+    text-align: center; 
+    display: inline-block;
+}
+
+.shuttleBackground {
+    background-color: green;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.container-right {
+    text-align: center; 
+    display: inline-block;
+}
+
+.container-right > p { 
+    display: inline-block;
+}
+
+.container-control-buttons {
+    text-align: center;
+}

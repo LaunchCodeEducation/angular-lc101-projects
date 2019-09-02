@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Exercises: Angular Lesson 3';
+  flightStatus = "Space shuttle ready for takeoff!";
+  isLanded = true;
+  spaceShuttleHeight = 0;
+
+  toggleMissionStatus() {
+    this.isLanded = !this.isLanded;
+  }
 }
