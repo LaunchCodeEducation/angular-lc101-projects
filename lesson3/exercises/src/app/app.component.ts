@@ -7,13 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Exercises: Angular Lesson 3';
-  statusMessages = ['Space shuttle ready for takeoff!', 'Shuttle in flight'];
-  colors = ['green', 'blue'];
-  
-  flightStatus = this.statusMessages[0];
-  isLanded = true;
-  spaceShuttleHeight = 0;
-  shuttleBackground = this.colors[0];
 
   initStatus = {
     color: 'green',
@@ -41,46 +34,46 @@ export class AppComponent {
 
   status = this.initStatus;
 
-  handleRightClick(img) {
-    let movement = parseInt(img.style.left) + 10 + 'px';
-    img.style.left = movement;
-  }
+  // handleTakeOff() {
+  //   let result = window.confirm('Are you sure the shuttle is ready for takeoff?');
+  //   if (result) {
+  //     this.status = this.shuttleTakeOff;
+  //   }
+  // }
 
-  handleLeftClick(img) {
-    let movement = parseInt(img.style.left) - 10 + 'px';
-    img.style.left = movement;
-  }
+  // handleLand(rocketImage) {
+  //   window.alert('The shuttle is landing. Landing gear engaged.');
+  //   this.status = this.shuttleLand;
+  //   rocketImage.style.bottom = '0px';
+  // }
 
-  handleDownClick(img) {
-    let movement = parseInt(img.style.bottom) - 10 + 'px';
-    img.style.bottom = movement;
-    this.status.height = this.status.height - 10000;
-  }
+  // handleMissionAbort(rocketImage) {
+  //   let result = window.confirm('Are you sure you want to end the mission?');
+  //   if (result) {
+  //     this.status = this.shuttleMissionAbort;
+  //     rocketImage.style.bottom = '0px';
+  //   }
+  // }
 
-  handleUpClick(img) {
-    let movement = parseInt(img.style.bottom) + 10 + 'px';
-    img.style.bottom = movement;
-    this.status.height = this.status.height + 10000;
-  }
+  // handleRightClick(rocketImage) {
+  //   let movement = parseInt(rocketImage.style.left) + 10 + 'px';
+  //   rocketImage.style.left = movement;
+  // }
 
-  handleTakeOff() {
-    let result = window.confirm('Are you sure the shuttle is ready for takeoff?');
-    if (result) {
-      this.status = this.shuttleTakeOff;
-    }
-  }
+  // handleLeftClick(rocketImage) {
+  //   let movement = parseInt(rocketImage.style.left) - 10 + 'px';
+  //   rocketImage.style.left = movement;
+  // }
 
-  handleLand(img) {
-    window.alert('The shuttle is landing. Landing gear engaged.');
-    this.status = this.shuttleLand;
-    img.style.bottom = '0px';
-  }
+  // handleDownClick(rocketImage) {
+  //   let movement = parseInt(rocketImage.style.bottom) - 10 + 'px';
+  //   rocketImage.style.bottom = movement;
+  //   this.status.height = this.status.height - 10000;
+  // }
 
-  handleMissionAbort(img) {
-    let result = window.confirm('Are you sure you want to end the mission?');
-    if (result) {
-      this.status = this.shuttleMissionAbort;
-      img.style.bottom = '0px';
-    }
-  }
+  // handleUpClick(rocketImage) {
+  //   let movement = parseInt(rocketImage.style.bottom) + 10 + 'px';
+  //   rocketImage.style.bottom = movement;
+  //   this.status.height = this.status.height + 10000;
+  // }
 }
