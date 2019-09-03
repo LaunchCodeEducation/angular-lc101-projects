@@ -19,47 +19,59 @@ export class AppComponent {
     color: 'green',
     height: 0,
     message: 'Space shuttle ready for takeoff!',
+    takeOffEnabled: true,
+    landEnabled: false,
+    missionAbortEnabled: false
   };
 
   shuttleTakeOff = {
     color: 'blue',
     height: 10000,
     message: 'Shuttle in flight.',
+    takeOffEnabled: false,
+    landEnabled: true,
+    missionAbortEnabled: true
   };
 
   shuttleLand = {
     color: 'green',
     height: 0,
     message: 'Shuttle landed.',
+    takeOffEnabled: true,
+    landEnabled: false,
+    missionAbortEnabled: false
   };
 
   shuttleMissionAbort = {
     color: 'green',
     height: 0,
     message: 'Mission aborted.',
+    takeOffEnabled: true,
+    landEnabled: false,
+    missionAbortEnabled: false
   };
 
   status = this.initStatus;
 
-  handleRightClick(img) {
-    let movement = parseInt(img.style.left) + 10 + 'px';
-    img.style.left = movement;
+  handleRightClick(rocketImage) {
+    let movement = parseInt(rocketImage.style.left) + 10 + 'px';
+    rocketImage.style.left = movement;
   }
 
-  handleLeftClick(img) {
-    let movement = parseInt(img.style.left) - 10 + 'px';
-    img.style.left = movement;
+  handleLeftClick(rocketImage) {
+    let movement = parseInt(rocketImage.style.left) - 10 + 'px';
+    rocketImage.style.left = movement;
   }
 
-  handleDownClick(img) {
-    let movement = parseInt(img.style.bottom) - 10 + 'px';
-    img.style.bottom = movement;
+  handleDownClick(rocketImage) {
+    let movement = parseInt(rocketImage.style.bottom) - 10 + 'px';
+    rocketImage.style.bottom = movement;
     this.status.height = this.status.height - 10000;
   }
 
-  handleUpClick(img) {
-    let movement = parseInt(img.style.bottom) + 10 + 'px';
-    img.style.bottom = movement;
+  handleUpClick(rocketImage) {
+    let movement = parseInt(rocketImage.style.bottom) + 10 + 'px';
+    rocketImage.style.bottom = movement;
     this.status.height = this.status.height + 10000;
   }
 
@@ -70,17 +82,17 @@ export class AppComponent {
     }
   }
 
-  handleLand(img) {
+  handleLand(rocketImage) {
     window.alert('The shuttle is landing. Landing gear engaged.');
     this.status = this.shuttleLand;
-    img.style.bottom = '0px';
+    rocketImage.style.bottom = '0px';
   }
 
-  handleMissionAbort(img) {
+  handleMissionAbort(rocketImage) {
     let result = window.confirm('Are you sure you want to end the mission?');
     if (result) {
       this.status = this.shuttleMissionAbort;
-      img.style.bottom = '0px';
+      rocketImage.style.bottom = '0px';
     }
   }
 }

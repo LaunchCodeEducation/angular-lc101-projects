@@ -16,25 +16,27 @@
       </div>
 
       <div class="col-6">
-         <div class="shuttleBackground" [style.backgroundColor]="status.color">
-            <img #img src = "assets/images/LaunchCode_rocketline_white.png" height = "75" width = "75" [style.left]="0" [style.bottom]="0"/>
+         <div class="shuttle-background" [style.backgroundColor]="status.color">
+            <img #rocketImage src = "assets/images/LaunchCode_rocketline_white.png" height = "75" width = "75" [style.left]="0" [style.bottom]="0"/>
          </div>
       </div>
 
       <div class="col-3">
-         <div class="container-right"b>
-            <button (click)="handleUpClick(img)">Up</button>
-            <button (click)="handleDownClick(img)">Down</button>
-            <button (click)="handleRightClick(img)">Right</button>
-            <button (click)="handleLeftClick(img)">Left</button>
+         <div class="container-right">
+            <div *ngIf="!status.takeOffEnabled">
+               <button (click)="handleUpClick(rocketImage)">Up</button>
+               <button (click)="handleDownClick(rocketImage)">Down</button>
+               <button (click)="handleRightClick(rocketImage)">Right</button>
+               <button (click)="handleLeftClick(rocketImage)">Left</button>
+            </div>
             <h3>Space Shuttle Height</h3>
             <p>{{status.height}}</p><p> miles</p>
          </div>
       </div>
    </div>
    <div class="container-control-buttons">
-      <button (click) = "handleTakeOff()">Take Off</button>
-      <button (click) = "handleLand(img)">Land</button>
-      <button (click) = "handleMissionAbort(img)">Abort Mission</button>
+      <button (click)="handleTakeOff()" [disabled]="!status.takeOffEnabled">Take Off</button>
+      <button (click)="handleLand(rocketImage)" [disabled]="!status.landEnabled">Land</button>
+      <button (click)="handleMissionAbort(rocketImage)" [disabled]="!status.missionAbortEnabled">Abort Mission</button>
    </div>
 </div>
