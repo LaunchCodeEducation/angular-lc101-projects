@@ -33,47 +33,4 @@ export class AppComponent {
   };
 
   status = this.initStatus;
-
-  // handleTakeOff() {
-  //   let result = window.confirm('Are you sure the shuttle is ready for takeoff?');
-  //   if (result) {
-  //     this.status = this.shuttleTakeOff;
-  //   }
-  // }
-
-  // handleLand(rocketImage) {
-  //   window.alert('The shuttle is landing. Landing gear engaged.');
-  //   this.status = this.shuttleLand;
-  //   rocketImage.style.bottom = '0px';
-  // }
-
-  // handleMissionAbort(rocketImage) {
-  //   let result = window.confirm('Are you sure you want to end the mission?');
-  //   if (result) {
-  //     this.status = this.shuttleMissionAbort;
-  //     rocketImage.style.bottom = '0px';
-  //   }
-  // }
-
-  // handleRightClick(rocketImage) {
-  //   let movement = parseInt(rocketImage.style.left) + 10 + 'px';
-  //   rocketImage.style.left = movement;
-  // }
-
-  // handleLeftClick(rocketImage) {
-  //   let movement = parseInt(rocketImage.style.left) - 10 + 'px';
-  //   rocketImage.style.left = movement;
-  // }
-
-  // handleDownClick(rocketImage) {
-  //   let movement = parseInt(rocketImage.style.bottom) - 10 + 'px';
-  //   rocketImage.style.bottom = movement;
-  //   this.status.height = this.status.height - 10000;
-  // }
-
-  // handleUpClick(rocketImage) {
-  //   let movement = parseInt(rocketImage.style.bottom) + 10 + 'px';
-  //   rocketImage.style.bottom = movement;
-  //   this.status.height = this.status.height + 10000;
-  // }
 }
