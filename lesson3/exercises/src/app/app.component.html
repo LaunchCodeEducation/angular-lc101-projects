@@ -2,7 +2,7 @@
    <div class="container-header">
       <h1>Flight Simulator</h1>
       <h2>Current Flight Status</h2>
-      <p>{{flightStatus}}</p>
+      <p>{{status.message}}</p>
       <h2>Shuttle Trajectory</h2>
    </div>
    <div class="row justify-content-center">
@@ -16,26 +16,25 @@
       </div>
 
       <div class="col-6">
-         <div class="shuttleBackground" [style.backgroundColor]="shuttleBackground">
-            <img src = "assets/images/LaunchCode_rocketline_white.png" height = "75" width = "75" id = "rocket"/>
+         <div class="shuttleBackground" [style.backgroundColor]="status.color">
+            <img #img src = "assets/images/LaunchCode_rocketline_white.png" height = "75" width = "75" [style.left]="0" [style.bottom]="0"/>
          </div>
       </div>
 
       <div class="col-3">
          <div class="container-right"b>
-            <button>Up</button>
-            <button>Down</button>
-            <button>Right</button>
-            <button>Left</button>
+            <button (click)="handleUpClick(img)">Up</button>
+            <button (click)="handleDownClick(img)">Down</button>
+            <button (click)="handleRightClick(img)">Right</button>
+            <button (click)="handleLeftClick(img)">Left</button>
             <h3>Space Shuttle Height</h3>
-            <p>{{spaceShuttleHeight}}</p><p> miles</p>
+            <p>{{status.height}}</p><p> miles</p>
          </div>
       </div>
    </div>
    <div class="container-control-buttons">
-      <button (click)="toggleMissionStatus()">
-            {{isLanded ? "Take Off" : "Land"}}
-      </button>
-      <button id = "missionAbort" disabled>Abort Mission</button>
+      <button (click) = "handleTakeOff()">Take Off</button>
+      <button (click) = "handleLand(img)">Land</button>
+      <button (click) = "handleMissionAbort(img)">Abort Mission</button>
    </div>
 </div>

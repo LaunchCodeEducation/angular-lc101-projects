@@ -20,6 +20,10 @@
     position: relative;
 }
 
+img {
+    position: absolute;
+}
+
 .container-right {
     text-align: center; 
     display: inline-block;
