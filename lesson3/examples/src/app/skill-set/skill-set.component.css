@@ -7,7 +7,13 @@ h3 {
    color: green;
 }
 
-.pcentered {
+.ol-style {
    color: black;
    text-align: center;
+   list-style-type: upper-roman;
+}
+
+.p-style {
+   color: rebeccapurple;
+   text-align: right;
 }
