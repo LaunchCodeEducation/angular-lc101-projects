@@ -9,7 +9,17 @@
 
 <div class="buttons">
    <h3>Joke {{buttonHeading}}</h3>
-   <button [class.gold]="active" [disabled]="!active " (mouseover)="active = false" (mouseout)="active = true">Frustration Incarnate!</button>
+   <!-- With Firefox, the mouseover and mouseout events can be applied within
+      the same button tag:
+   
+   <button [class.gold]="active" [disabled]="!active" (mouseover)="active = false" (mouseout)="active = true">Examine buttons.component.html</button>
+   -->
+
+   <!-- For other browsers, mouseout must be placed in a separate tag: -->
+   <div (mouseout)="active = true">
+      <button [class.gold]="active" [disabled]="!active" (mouseover)="active = false">Examine buttons.component.html</button>
+   </div>
+
    <hr>
    <div [align]="location" (mouseover)="location = shiftLocation(location)">
       <button class="silver">Catch Me!</button>

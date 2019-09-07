@@ -10,7 +10,6 @@ export class ButtonsComponent implements OnInit {
    active: boolean = true;
    buttonState: boolean[] = [true, true, true];
    location: string = 'center';
-   reactivate: boolean = true;
 
    constructor() { }
 
