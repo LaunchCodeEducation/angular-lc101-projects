@@ -7,13 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Exercises: Angular Lesson 3';
-  statusMessages = ['Space shuttle ready for takeoff!', 'Shuttle in flight'];
-  colors = ['green', 'blue'];
-  
-  flightStatus = this.statusMessages[0];
-  isLanded = true;
-  spaceShuttleHeight = 0;
-  shuttleBackground = this.colors[0];
 
   initStatus = {
     color: 'green',
@@ -43,7 +36,7 @@ export class AppComponent {
   };
 
   shuttleMissionAbort = {
-    color: 'green',
+    color: 'red',
     height: 0,
     message: 'Mission aborted.',
     takeOffEnabled: true,
