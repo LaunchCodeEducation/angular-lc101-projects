@@ -27,7 +27,7 @@ export class AppComponent {
   };
 
   shuttleMissionAbort = {
-    color: 'green',
+    color: 'red',
     height: 0,
     message: 'Mission aborted.',
   };
