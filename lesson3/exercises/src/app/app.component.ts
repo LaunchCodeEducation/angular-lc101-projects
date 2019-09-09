@@ -21,32 +21,25 @@ export class AppComponent {
       this.color = 'blue';
     }
   }
-  
-  handleRightClick(rocketImage) {
-    let movement = parseInt(rocketImage.style.left) + 10 + 'px';
-    rocketImage.style.left = movement;
-    this.width = this.width + 10000;
-    this.gutterCheck(this.width, this.height);
-  }
 
-  handleLeftClick(rocketImage) {
-    let movement = parseInt(rocketImage.style.left) - 10 + 'px';
-    rocketImage.style.left = movement;
-    this.width= this.width - 10000;
-    this.gutterCheck(this.width, this.height);
-  }
-
-  handleDownClick(rocketImage) {
-    let movement = parseInt(rocketImage.style.bottom) - 10 + 'px';
-    rocketImage.style.bottom = movement;
-    this.height = this.height - 10000;
-    this.gutterCheck(this.width, this.height);
-  }
-
-  handleUpClick(rocketImage) {
-    let movement = parseInt(rocketImage.style.bottom) + 10 + 'px';
-    rocketImage.style.bottom = movement;
-    this.height = this.height + 10000;
+  moveRocket(rocketImage, direction) {
+    if (direction === 'right') {
+      let movement = parseInt(rocketImage.style.left) + 10 + 'px';
+      rocketImage.style.left = movement;
+      this.width = this.width + 10000;
+    } else if (direction === 'left') {
+      let movement = parseInt(rocketImage.style.left) - 10 + 'px';
+      rocketImage.style.left = movement;
+      this.width= this.width - 10000;
+    } else if (direction === 'down') {
+      let movement = parseInt(rocketImage.style.bottom) - 10 + 'px';
+      rocketImage.style.bottom = movement;
+      this.height = this.height - 10000;
+    } else {
+      let movement = parseInt(rocketImage.style.bottom) + 10 + 'px';
+      rocketImage.style.bottom = movement;
+      this.height = this.height + 10000;
+    }
     this.gutterCheck(this.width, this.height);
   }
 
