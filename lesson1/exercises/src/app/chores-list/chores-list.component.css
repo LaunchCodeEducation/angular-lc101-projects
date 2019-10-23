@@ -1,0 +1,13 @@
+h3 {
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    color: purple;
+    text-align: left;
+    text-decoration: underline;
+}
+
+ul {
+    font-size: 1em;
+    font-style: italic;
+    color: teal;
+}
