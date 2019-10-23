@@ -1,11 +1,16 @@
 h3 {
-    color: brown;
+    color: red;
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-decoration: underline;
 }
 
 img {
-    max-width: 300px;
-    height: 200px;
+    max-width: 200px;
+    height: 100px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .photos {

@@ -1,7 +1,9 @@
 h3 {
     color: navy;
     font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    text-decoration: underline;
 }
 
 ol {

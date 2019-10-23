@@ -11,3 +11,8 @@ ul {
     font-style: italic;
     color: teal;
 }
+
+img {
+    max-width: 100px;
+    height: 100px;
+}
