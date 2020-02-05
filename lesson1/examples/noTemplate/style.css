@@ -1,0 +1,40 @@
+h1 {
+	text-align: center;
+	font-size: 3.5vw;
+ }
+ 
+ h2 {
+	text-align: center;
+	font-size: 2.5vw;
+ }
+ 
+ .list {
+	margin-left: 40px;
+	font-size: 1.8vw;
+ }
+ 
+ ul {
+	text-align: left;
+ }
+ 
+ .row {
+	column-count: 3;
+	display: flex;
+	text-align: center;
+ }
+ 
+ .links {
+	text-align: center;
+ }
+ 
+ .movie{
+	color:purple;
+ }
+ 
+ .school{
+	color:black;
+ }
+ 
+ .hobby{
+	color:red;
+ }
