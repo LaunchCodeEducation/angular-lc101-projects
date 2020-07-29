@@ -9,7 +9,7 @@ export class ChoresComponent implements OnInit {
    chores = ['Empty dishwasher', 'Complete LaunchCode prep work', 'Buy groceries'];
    finishedChores = [];
 
-   trophyImage = 'https://www.launchcode.org/assets/icons/trophy-95e8cbe9bfda44123422302951deb1c92a237d39052669b8fbfafec00cb4f608.png';
+   targetImage = 'https://www.launchcode.org/assets/icons/target-00c7a0bc7776901e3c5cdc4c36c465f19e41a249bc7267a595f0bfa14ab944b7.png';
 
    constructor() { }
 
