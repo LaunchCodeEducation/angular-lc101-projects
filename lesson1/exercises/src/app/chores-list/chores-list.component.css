@@ -2,6 +2,10 @@
     font-size: 18px;
     color: blueviolet;
 }
-ul {
+h3 {
+    text-decoration: underline;
+}
+
+li {
     font-style: italic;
 }
