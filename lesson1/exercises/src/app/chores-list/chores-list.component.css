@@ -1,5 +1,7 @@
-choresListComponent {
-   font-size: 18px;
+.chores {
+    font-size: 18px;
     color: blueviolet;
+}
+ul {
     font-style: italic;
 }

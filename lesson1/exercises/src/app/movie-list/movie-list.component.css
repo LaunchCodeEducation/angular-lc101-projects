@@ -1,6 +1,11 @@
-movies {
+.movies {
     color:blue;
-    text-align: center;
-    font-size: 18px;
+}
 
+h3 {
+    text-align: center;
+}
+
+ol {
+    font-size: 18px;
 }
