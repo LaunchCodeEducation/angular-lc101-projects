@@ -1,11 +1,17 @@
+.FavPhotosComponent {
+   text-align: center;
+}
+
 h3 {
    color: brown;
+   text-align: center;
 }
 
 img {
-
+   width: 150px;
 }
 
 .photos {
    text-align: center;
+   width: 150px;
 }
