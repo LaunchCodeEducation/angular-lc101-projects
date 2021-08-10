@@ -1,3 +1,8 @@
 .movies{
     color: rgb(36, 99, 216);
+    font-size: 1.3vw;
+}
+
+h3 {
+    text-align: center;
 }
