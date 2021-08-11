@@ -2,13 +2,16 @@
     <h3>Chores</h3>
     <ul>
         <li *ngFor = 'let chore of chores'>{{chore}}</li>
+        <p *ngIf = "chores.length > finishedChores.length">Work Harder!</p>
     </ul>
 </div>
+
 <hr>
 <div class="doneChores">
     <h3>Done Chores</h3>
     <ul>
         <li *ngFor = 'let done of finishedChores'>{{done}}</li>
+        <img src = targetImage *ngIf = 'chores.length < 1 || (finishedChores.length + 3) > chores.length'>
     </ul>
 </div>
 <hr>

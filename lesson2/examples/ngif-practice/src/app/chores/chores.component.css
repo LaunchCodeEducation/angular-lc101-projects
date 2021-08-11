@@ -16,3 +16,7 @@ img {
     display: block;
     margin: auto;
 }
+
+p {
+    color: rgb(47, 122, 47);
+}
