@@ -6,3 +6,17 @@
 h3 {
     text-align: center;
 }
+
+.movies{
+    border-radius: 25px;
+    border: 1px solid #000000;
+    padding: auto;
+    width: flex;
+    height: flex; 
+    align-items: center;
+}
+
+li {
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

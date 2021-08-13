@@ -2,6 +2,11 @@ div{
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
     color: coral;
+    border-radius: 25px;
+    border: 1px solid #151614;
+    padding: 20px;
+    width: 200px;
+    height:auto;
 }
 
 h3 {
@@ -9,6 +14,8 @@ h3 {
     text-align: center;
 }
 
+
 li {
     font-style: italic;
+    
 }
