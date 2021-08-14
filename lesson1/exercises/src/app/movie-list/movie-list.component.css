@@ -1,19 +1,22 @@
 .movies{
-    color: rgb(36, 99, 216);
+    color: rgb(21, 22, 24);
     font-size: 1.3vw;
 }
 
 h3 {
     text-align: center;
+    color: darkmagenta;
 }
 
-.movies{
+div{
     border-radius: 25px;
     border: 1px solid #000000;
-    padding: auto;
-    width: flex;
-    height: flex; 
+    padding: 20px;
+    width: auto;
+    height: 300px; 
     align-items: center;
+    background-color: floralwhite;
+    opacity: 0.75;
 }
 
 li {

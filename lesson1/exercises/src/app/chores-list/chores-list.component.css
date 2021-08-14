@@ -6,7 +6,9 @@ div{
     border: 1px solid #151614;
     padding: 20px;
     width: 200px;
-    height:auto;
+    height:300px;
+    background-color: floralwhite;
+    opacity: 0.75;
 }
 
 h3 {
