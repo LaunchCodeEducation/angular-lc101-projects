@@ -1,4 +1,4 @@
-<div class='movies'>
+<div class='movies' *ngIf = "movies.length > 3">
     <h3>Movies to Watch</h3>
     <ol>
         <li *ngFor = 'let movie of movies'>{{movie}}</li>
