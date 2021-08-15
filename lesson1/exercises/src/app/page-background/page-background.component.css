@@ -1,9 +1,8 @@
-.bgImage {
+#imageForBg {
     height: 650 px;
     color: #fff;
     background-image: url("https://www.dropbox.com/s/gbc2evw8k28gmad/bgImage.jpg?raw=1");
     background-size: 100%;
     background-size: cover;
-    opacity: 1.5;
    
 }
