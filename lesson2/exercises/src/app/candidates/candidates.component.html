@@ -3,37 +3,43 @@
     <br>
     <div class="row justify-content-center">
         <div class="candidates col-3">
-            <h2>Candidates</h2>
+            <h2 >Candidates</h2>
             <ol>
-                <li>Use *ngFor to automatically list all of the candidates' names.</li>
+                <li *ngFor = "let candidate of candidates" (click)="selected = candidate" >{{candidate.name}}</li>
             </ol>
         </div>
     
         <div class="data col-3">
             <h2>Candidate Data</h2>
-            <p> <!-- Add an *ngIf to this tag to display the selected candidate's data-->
-                {{selected.name}}
+            <p *ngIf = "selected">
+               Name: {{selected.name}} <br>
+               Age: {{selected.data.age}} <br>
+               Mass: {{selected.data.mass}}<br>
+               Sidekick:{{selected.data.sidekick}} <!-- Add an *ngIf to this tag to display the selected candidate's data-->
+                
             </p>
         </div>
     
         <div class="centered col-3">
             <h2>Sidekick</h2>
             <!-- Use *ngIf and the correct placeholder to display a sidekick's image -->
-            <img src="{{placeholder}}" alt="OOPS! No image available."/>
+            <img *ngIf="selected" src="{{selected.data.image}}" alt="OOPS! No image available."/>
         </div>
 
         <div class="crew col-3">
             <h2>Selected Crew</h2>
             <ul>
-                <li>Use *ngFor to list the selected crew.</li>
+                <li *ngFor = "let list of crew">{{list.name}}</li>
             </ul>
             <!-- Add a "Clear Crew List" button here. -->
+            <button *ngIf = "crew.length !== 0" (click) = "crew = [] ">Clear Crew List</button>
         </div>
     </div>
     <hr>
     <div class = 'centered'>
-        <button>Clear Data & Image</button>
+        <button (click) = "selected = false">Clear Data & Image</button>
         <!-- Add a "Send on Mission" button here. -->
+        <button *ngIf = "selected && crew.length < 3 && !crew.includes(selected)" (click)="addToCrew(selected)">Send on Mission</button>
     </div>
 </div>
 
