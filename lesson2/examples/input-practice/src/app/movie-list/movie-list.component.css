@@ -9,3 +9,7 @@
  .center {
     text-align: center;
  }
+
+ .error {
+    color: rgb(219, 26, 26);
+ }
