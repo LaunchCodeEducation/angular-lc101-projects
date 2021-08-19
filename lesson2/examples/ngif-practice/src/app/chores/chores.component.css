@@ -16,3 +16,11 @@ img {
     display: block;
     margin: auto;
 }
+
+.choreMessage{
+    color: darkmagenta;
+}
+
+.icecreamList{
+    color: rgb(104, 148, 59) ;
+}

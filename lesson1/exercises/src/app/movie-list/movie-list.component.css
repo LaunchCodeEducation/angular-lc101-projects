@@ -1,0 +1,25 @@
+.movies{
+    color: rgb(21, 22, 24);
+    font-size: 1.3vw;
+}
+
+h3 {
+    text-align: center;
+    color: darkmagenta;
+}
+
+div{
+    border-radius: 25px;
+    border: 1px solid #000000;
+    padding: 20px;
+    width: auto;
+    height: 300px; 
+    align-items: center;
+    background-color: floralwhite;
+    opacity: 0.75;
+}
+
+li {
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
