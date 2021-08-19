@@ -1,6 +1,6 @@
 <div class="buttons">
    <h3>{{buttonHeading}}</h3>
-   <button class="gold">Gold</button> <br>
+   <button [class.gold]="!inactive" [disabled]="inactive" (click)="inactive = true">Gold</button> <br>
    <button class="silver">Silver</button> <br>
    <button class="copper">Copper</button> <hr>
    <button>Activate/Deactivate Buttons</button>
