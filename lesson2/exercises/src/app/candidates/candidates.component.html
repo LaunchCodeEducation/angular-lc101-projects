@@ -1,5 +1,5 @@
 <div class="container">
-    <h2 class="centered">Mission Name: {{missionName}}</h2>
+    <h2 class="centered" *ngIf = "!editMissionName; else editMission" (click)="editMissionName = true">Mission Name: {{missionName}}</h2>
     <br>
     <div class="row justify-content-center">
         <div class="candidates col-3">
@@ -46,8 +46,8 @@
 <!-- The code below is for one of the Bonus Missions -->
 <ng-template #editMission>
     <h2 class="centered">
-        Mission Name:
+        Mission Time:
         <!-- Add a keyup.enter event that calls the changeMissionName function. -->
-        <input #newName type="text"/>
+        <input #newName (keyup.enter)="changeMissionName(name)" type="text"/>
     </h2>
 </ng-template>
