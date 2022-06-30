@@ -2,7 +2,11 @@
    <div class="container-header">
       <h1>Flight Simulator</h1>
       <h2>Current Flight Status</h2>
+<<<<<<< HEAD
       <p>Space shuttle ready for takeoff!</p>
+=======
+      <p>{{message}}</p>
+>>>>>>> bd292d7fa744c43d7a8cadf1f15b9f85ac04df93
       <h2>Shuttle Trajectory</h2>
    </div>
    <div class="row justify-content-center">
@@ -16,12 +20,18 @@
       </div>
 
       <div class="col-6">
+<<<<<<< HEAD
          <div class="shuttle-background" style="background-color: green">
             <img src="assets/images/LaunchCode_rocketline_white.png" height = "75" width = "75" [style.left]="0" [style.bottom]="0"/>
+=======
+         <div class="shuttle-background" [style.backgroundColor]="color">
+            <img #rocketImage src = "assets/images/LaunchCode_rocketline_white.png" height = "75" width = "75" [style.left]="0" [style.bottom]="0"/>
+>>>>>>> bd292d7fa744c43d7a8cadf1f15b9f85ac04df93
          </div>
       </div>
 
       <div class="col-3">
+<<<<<<< HEAD
          <div class="container-right"b>
             <button>Up</button>
             <button>Down</button>
@@ -29,12 +39,29 @@
             <button>Left</button>
             <h3>Space Shuttle Height</h3>
             <p>0 km</p>
+=======
+         <div class="container-right">
+            <div *ngIf="!takeOffEnabled">
+               <button (click)="moveRocket(rocketImage, 'up')">Up</button>
+               <button (click)="moveRocket(rocketImage, 'down')">Down</button>
+               <button (click)="moveRocket(rocketImage, 'right')">Right</button>
+               <button (click)="moveRocket(rocketImage, 'left')">Left</button>
+            </div>
+            <h3>Space Shuttle Height</h3>
+            <p>{{height}} km</p>
+>>>>>>> bd292d7fa744c43d7a8cadf1f15b9f85ac04df93
          </div>
       </div>
    </div>
    <div class="container-control-buttons">
+<<<<<<< HEAD
       <button>Take Off</button>
       <button>Land</button>
       <button>Abort Mission</button>
+=======
+      <button (click)="handleTakeOff()" [disabled]="!takeOffEnabled">Take Off</button>
+      <button (click)="handleLand(rocketImage)" [disabled]="takeOffEnabled">Land</button>
+      <button (click)="handleMissionAbort(rocketImage)" [disabled]="takeOffEnabled">Abort Mission</button>
+>>>>>>> bd292d7fa744c43d7a8cadf1f15b9f85ac04df93
    </div>
 </div>

@@ -1,8 +1,20 @@
-<div class='movies col-4'>
+<div class="movies col-4">
     <h3>Movies to Watch</h3>
     <ol>
        <li *ngFor ="let movie of movies">{{movie}}</li>
     </ol>
     <hr>
+<<<<<<< HEAD
 
+=======
+    <input #newMovie (keyup.enter)="addMovie(newMovie.value); newMovie.value = ''" type="text" placeholder="Enter Movie Title Here"/>
+    <button (click)="addMovie(newMovie.value); newMovie.value = ''">Add</button>
+
+    <!-- The following lines solve the bonus tasks. Replace lines 7 & 8 with lines
+         12 - 14.
+    <input #newMovie (keyup.enter)="message = addMovie(newMovie.value); newMovie.value = ''" type="text" placeholder="Enter Movie Title Here"/>
+    <button (click)="message = addMovie(newMovie.value); newMovie.value = ''">Add</button>
+    <p class = "error" *ngIf = "message">{{message}}</p>
+    -->
+>>>>>>> bd292d7fa744c43d7a8cadf1f15b9f85ac04df93
  </div>

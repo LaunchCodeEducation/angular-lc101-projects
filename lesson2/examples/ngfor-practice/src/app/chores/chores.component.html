@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 <div class='chores' *ngFor = "let title of todoTitles">
     <h3>{{title}}</h3>
     <ul>
       <li *ngFor = "let chore of chores">{{chore}}</li>
+=======
+<div class='chores' *ngFor = 'let list of chores'>
+    <h3>{{list.title}}</h3>
+    <ul>
+        <li *ngFor = 'let chore of list.tasks'>{{chore}}</li>
+>>>>>>> bd292d7fa744c43d7a8cadf1f15b9f85ac04df93
     </ul>
     <hr>
- </div>
+</div>
  

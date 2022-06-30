@@ -5,4 +5,18 @@ h3 {
 
 .skills {
    color: green;
+<<<<<<< HEAD
+=======
+}
+
+.ol-style {
+   color: black;
+   text-align: center;
+   list-style-type: upper-roman;
+}
+
+.p-style {
+   color: rebeccapurple;
+   text-align: right;
+>>>>>>> bd292d7fa744c43d7a8cadf1f15b9f85ac04df93
 }

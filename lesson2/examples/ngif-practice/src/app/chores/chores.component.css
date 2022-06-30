@@ -2,6 +2,10 @@
     color: #ff4f33;
 }
 
+.treat {
+    color: #419f6a;
+}
+
 .doneChores {
     color: #3c79b8;
 }
@@ -15,4 +19,8 @@ img {
     height: auto;
     display: block;
     margin: auto;
+}
+
+p {
+    text-align: center;
 }
