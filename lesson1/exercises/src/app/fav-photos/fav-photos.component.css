@@ -1,9 +1,10 @@
 h3 {
-   color: brown;
+   color: purple;
 }
 
 img {
-
+   width: 50%;
+   height: 50%;
 }
 
 .photos {

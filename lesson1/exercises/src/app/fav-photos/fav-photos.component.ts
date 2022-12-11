@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fav-photos.component.css']
 })
 export class FavPhotosComponent implements OnInit {
-  photosTitle = 'Photo/Image Section Title Here';
-  image1 = 'https://www.launchcode.org/assets/icons/target-00c7a0bc7776901e3c5cdc4c36c465f19e41a249bc7267a595f0bfa14ab944b7.png';
-  image2 = '';
-  image3 = '';
-
+  photosTitle = 'Images';
+  image1 = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9_ZFCn5UxHjcC-Ul1YvrQzd3nYJK6rXJrvg&usqp=CAU';
+  image2 = 'https://www.rmg.co.uk/sites/default/files/styles/max_width_1440/public/2022-07/STScI-01G79RF5F5TPZJSDT3Y640XNQ1-southern-ring-nebula.jpg?itok=CLW7jhNZ';
+  image3 = 'https://www.oberlo.com/media/1603969791-image-1.jpg';
+  
   constructor() { }
 
   ngOnInit() {
